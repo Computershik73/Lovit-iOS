@@ -1,0 +1,3 @@
+/* Application name on the home screen. */
+"CFBundleDisplayName" = "Lovit";
+"CFBundleName" = "Lovit";

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	    Права, которые ldid вшивает в подпись (см. Lovit_CODESIGN_FLAGS
+	    в Makefile: флаг -S с именем этого файла).
+
+	    Без keychain-access-groups приложение с самоподписанной подписью
+	    не получает своей группы в связке ключей, и SecItemAdd отвечает
+	    отказом. Заметно это не сразу: токен «сохраняется», приложение
+	    работает до перезапуска, а после — просит войти заново.
+
+	    Группа названа так же, как связка: своей группой владеет тот, чей
+	    идентификатор совпадает с application-identifier.
+
+	    platform-application нужен на джейлбрейке приложениям из
+	    /Applications: без него система обращается с ними как с чужими
+	    и урезает доступ к службам, включая связку ключей.
+
+	    Если запись в связку всё равно не проходит (сборки бывают разные),
+	    MAXSecureStore уходит в настройки и пишет об этом в журнал —
+	    приложение работает, но переустановку вход не переживёт.
+	-->
+	<key>application-identifier</key>
+	<string>ru.computershik.lovit</string>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>ru.computershik.lovit</string>
+	</array>
+	<key>platform-application</key>
+	<true/>
+</dict>
+</plist>

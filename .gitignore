@@ -1,0 +1,19 @@
+.theos/
+packages/
+*.ipa
+*.deb
+__pycache__/
+.DS_Store
+*.zip
+
+# Не для репозитория: снимки экрана с перепиской, сводки к сборкам с
+# обрывками журналов, план работ, инструменты для своих скриншотов,
+# настройки Claude Code.
+screenshots/
+screenshots_old/
+builds/
+PLAN.md
+tools/redact-max.py
+tools/redact-screens.py
+.claude/
+max.log

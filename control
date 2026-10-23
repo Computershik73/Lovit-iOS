@@ -1,0 +1,9 @@
+Package: ru.computershik.lovit
+Name: Ловит
+Version: 1.1.66
+Architecture: iphoneos-arm
+Description: Клиент мессенджера MAX для iOS 6 и новее
+Maintainer: Computershik
+Author: Computershik
+Section: Social
+Depends: firmware (>= 6.0)

@@ -1,0 +1,7 @@
+# Переводы строк — только LF, на любой системе. Проект собирается в Linux
+# (WSL), и shell-скрипты, Makefile и Info.plist с CRLF там ломаются.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.der binary

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>ru</string>
+	<!--
+	    Языки, на которых приложение умеет говорить.
+
+	    Само приложение целиком русское и ничего не переводит, но от этого
+	    списка зависит клавиатура: iOS 6 отдаёт приложению не все включённые
+	    в системе клавиатуры, а только те, чей язык оно объявило. Не
+	    объявившему не достаётся ничего, кроме английской по умолчанию,
+	    и глобус не рисуется вовсе — переключать не на что.
+
+	    Объявляется двумя способами сразу, и оба нужны: ключ здесь и папки
+	    ru.lproj / en.lproj в связке.
+	-->
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>ru</string>
+		<string>en</string>
+	</array>
+	<!--
+	    Зачем микрофон. Система спрашивает разрешение сама, но начиная с
+	    iOS 10 отказывается спрашивать без этой строки: приложение снимается
+	    в тот же миг, когда впервые открывает микрофон, — молча и без записи
+	    в журнале падений. На iOS 6–9 ключ не нужен и не мешает.
+	-->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Чтобы записывать голосовые сообщения</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Чтобы снимать кружки-видеосообщения</string>
+	<key>CFBundleDisplayName</key>
+	<string>Ловит</string>
+	<key>CFBundleExecutable</key>
+	<string>Lovit</string>
+	<key>CFBundleIdentifier</key>
+	<string>ru.computershik.lovit</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Ловит</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>CFBundleVersion</key>
+	<string>1.1.66</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>iPhoneOS</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>6.0</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-57.png</string>
+		<string>Icon-72.png</string>
+		<string>Icon-76.png</string>
+		<string>Icon-114.png</string>
+		<string>Icon-120.png</string>
+		<string>Icon-144.png</string>
+		<string>Icon-152.png</string>
+		<string>Icon-180.png</string>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<!--
+	    Экраны запуска.
+
+	    Это не украшение: по наличию картинки нужного размера iOS решает,
+	    умеет ли приложение работать на этом экране. Без Default-568h@2x
+	    на iPhone 5 оно запускается в режиме 320x480 — с чёрными полосами
+	    сверху и снизу.
+
+	    Файлы с классическими именами нужны для iOS 6, где этого списка ещё
+	    не понимают; сам список — для iOS 7 и новее.
+	-->
+	<key>UILaunchImages</key>
+	<array>
+		<dict>
+			<key>UILaunchImageName</key>
+			<string>Default</string>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{320, 480}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageName</key>
+			<string>Default-568h</string>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{320, 568}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageName</key>
+			<string>Default-667h</string>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>8.0</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{375, 667}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageName</key>
+			<string>Default-736h</string>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>8.0</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{414, 736}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageName</key>
+			<string>Default-Portrait</string>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{768, 1024}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageName</key>
+			<string>Default-Landscape</string>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Landscape</string>
+			<key>UILaunchImageSize</key>
+			<string>{768, 1024}</string>
+		</dict>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<!--
+	    Ориентации.
+
+	    На iPhone перевёрнутая портретная не объявляется намеренно: так же
+	    ведут себя системные приложения, и вращать экран на 180° в мессенджере
+	    незачем. На планшете она есть — там это обычное дело.
+
+	    Экраны с раскладкой во фреймах пересчитывают её сами: списки чатов и
+	    сообщений перезагружаются в didRotateFromInterfaceOrientation, потому
+	    что высота ячейки считается от ширины таблицы.
+	-->
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+
+	<!--
+	  App Transport Security.
+
+	  ATS появилась в iOS 9 и распространяется на приложения, собранные с её
+	  SDK, — наш случай, SDK здесь 9.3. К самому протоколу MAX она отношения
+	  не имеет: соединение идёт сырым сокетом через NSStream, а ATS следит
+	  за NSURLConnection и NSURLSession. Ключ стоит ради аватарок и картинок,
+	  которые сервер отдаёт по обычному HTTP.
+	-->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+</dict>
+</plist>
